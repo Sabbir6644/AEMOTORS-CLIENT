@@ -19,7 +19,7 @@ const Context = ({ children }) => {
      // loaded created user from database
      const [loadedProduct, setLoadedProduct] = useState();
      useEffect(() => {
-          fetch('https://user-management-server-n86cuk474-servers-projects.vercel.app/product/')
+          fetch('https://user-management-server-koayagszg-servers-projects.vercel.app/product/')
                .then(res => res.json())
                .then(data => setLoadedProduct(data))
      }, [loadedProduct])

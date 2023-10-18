@@ -22,6 +22,7 @@ import Toyota from './Component/Catagory/Toyota';
 import Mercedes from './Component/Mercedes';
 import Honda from './Component/Catagory/Honda';
 import Ford from './Component/Catagory/Ford';
+import ProductDeatils from './Component/ProductDeatils';
 
 const router = createBrowserRouter([
   {
@@ -51,13 +52,19 @@ const router = createBrowserRouter([
       element: <Login></Login>
     },
     {
-      path: "/:id",
+      path: "/product/:_id",
+      element: <ProductDeatils></ProductDeatils>,
+      loader: ({ params }) => fetch(`https://user-management-server-koayagszg-servers-projects.vercel.app/product/id/${params._id}`)
+    },
+    {
+      path: "/:_id",
       element: <UpdateProduct></UpdateProduct>,
-      loader: ({ params }) => fetch(`https://user-management-server-n86cuk474-servers-projects.vercel.app/product/${params.id}`)
+      loader: ({ params }) => fetch(`https://user-management-server-koayagszg-servers-projects.vercel.app/product/id/${params._id}`)
     },
     {
       path: "/bmw",
       element: <Bmw></Bmw>,
+      
     },
     {
       path: "/honda",

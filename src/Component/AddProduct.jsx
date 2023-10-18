@@ -13,7 +13,8 @@ const AddProduct = () => {
           const image = e.target.image.value;
          const newProduct={name, brandName, type, price, rating, details, image }
 console.log(name);
-          fetch('https://user-management-server-n86cuk474-servers-projects.vercel.app/product/', {
+
+          fetch('https://user-management-server-4tv0wlx3x-servers-projects.vercel.app/product/', {
                method: 'POST',
                headers: {
                  'Content-Type': 'application/json'
