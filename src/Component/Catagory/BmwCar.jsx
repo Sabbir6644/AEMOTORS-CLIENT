@@ -8,7 +8,7 @@ const BmwCar = ({car}) => {
 
      return (
           <div className="card border">
-          <figure><img className="w-4/5 mx-auto" src={image} alt="car" /></figure>
+          <figure><img className="w-full max-h-96 mx-auto" src={image} alt="car" /></figure>
           <div className="card-body">
             <h2 className=" text-2xl font-bold text-red-900">
               {name}

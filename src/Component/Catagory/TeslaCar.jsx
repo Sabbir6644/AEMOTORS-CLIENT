@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
+
 import { Link } from "react-router-dom";
 
 
-const FordCar = ({car}) => {
+const TeslaCar = ({car}) => {
      const { brandName, image, name, price, type, rating, _id } = car;
      return (
         
@@ -32,4 +33,4 @@ const FordCar = ({car}) => {
      );
 };
 
-export default FordCar;
+export default TeslaCar;

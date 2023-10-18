@@ -53,12 +53,12 @@ const router = createBrowserRouter([
     },
     {
       path: "/product/:_id",
-      element: <ProductDeatils></ProductDeatils>,
+      element: <PrivateRoute><ProductDeatils></ProductDeatils></PrivateRoute>,
       loader: ({ params }) => fetch(`https://user-management-server-koayagszg-servers-projects.vercel.app/product/id/${params._id}`)
     },
     {
       path: "/:_id",
-      element: <UpdateProduct></UpdateProduct>,
+      element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
       loader: ({ params }) => fetch(`https://user-management-server-koayagszg-servers-projects.vercel.app/product/id/${params._id}`)
     },
     {

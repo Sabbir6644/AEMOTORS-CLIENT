@@ -13,6 +13,12 @@ import toyotaImg from "/src/images/toyota.png"
 import corollaImg from "/src/images/corolla.jpg"
 import cruiserImg from "/src/images/cruiser.webp"
 import glanzaImg from "/src/images/glanza.jpg"
+import car1 from "/src/images/car1 (1).png"
+import car2 from "/src/images/car1 (2).png"
+import car3 from "/src/images/car1 (3).png"
+import car4 from "/src/images/car1 (4).png"
+import car5 from "/src/images/car1 (5).png"
+import car6 from "/src/images/car1 (6).png"
 
 
 export const AuthContext = createContext()
@@ -62,12 +68,13 @@ const Context = ({ children }) => {
           bannerImg, bmwImg, teslaImg,glanzaImg,
           fordImg, hondaImg, mercedesImg,
           loadedProduct, signInWithGoogle,
-          logout, loading, setLoading, createUser, userLogin
+          logout, loading, setLoading, createUser, userLogin,
+          car1, car2, car3, car4, car5, car6
      }
      return (
           <AuthContext.Provider value={authInfo}>
                {children}
-               
+             
           </AuthContext.Provider>
      );
 };
