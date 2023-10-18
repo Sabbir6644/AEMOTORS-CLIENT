@@ -10,14 +10,14 @@ const Header = () => {
      const link= <>
      <Link to={'/'}>Home</Link>
      <Link to={'/addProduct'}>Add Product</Link>
-     <Link to={'/user'}>My Cart</Link>
+     <Link to={'/cart'}>My Cart</Link>
 
      </>
 const handleLogOut =()=>{
   logout()
  }
      return (
-          <div className="navbar bg-base-100">
+          <div className="navbar bg-red-900 shadow-xl text-white">
           <div className="navbar-start">
             <div className="dropdown">
               <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -35,7 +35,7 @@ const handleLogOut =()=>{
               </ul>
             </div>
             <img className='h-12 w-16' src={logo} alt="" />
-            <h2 className='ml-2 text-3xl md:text-5xl font-semibold'>A<span className='text-red-900'>E</span>MOTORS</h2>
+            <h2 className='ml-2 text-3xl md:text-5xl font-semibold'>A<span className=''>E</span>MOTORS</h2>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1 gap-5 text-lg font-bold">

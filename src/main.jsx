@@ -9,7 +9,6 @@ import {
 import Home from './Component/Home';
 import Context from './Component/Context';
 import Registration from './Component/Registration';
-import User from './Component/User';
 import Login from './Component/Login';
 import AddProduct from './Component/AddProduct';
 import PrivateRoute from './Component/PrivateRoute';
@@ -23,6 +22,7 @@ import Mercedes from './Component/Mercedes';
 import Honda from './Component/Catagory/Honda';
 import Ford from './Component/Catagory/Ford';
 import ProductDeatils from './Component/ProductDeatils';
+import Cart from './Component/Cart';
 
 const router = createBrowserRouter([
   {
@@ -44,8 +44,8 @@ const router = createBrowserRouter([
       element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
     },
       {
-      path: "/user",
-      element: <PrivateRoute><User></User></PrivateRoute>
+      path: "/cart",
+      element: <PrivateRoute><Cart></Cart></PrivateRoute>
     },
       {
       path: "/login",

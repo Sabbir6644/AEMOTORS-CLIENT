@@ -10,6 +10,9 @@ import hondaImg from "/src/images/Honda-Logo.png"
 import mercedesImg from "/src/images/Mercedes-Benz.png"
 import teslaImg from "/src/images/tesla.jpg"
 import toyotaImg from "/src/images/toyota.png"
+import corollaImg from "/src/images/corolla.jpg"
+import cruiserImg from "/src/images/cruiser.webp"
+import glanzaImg from "/src/images/glanza.jpg"
 
 
 export const AuthContext = createContext()
@@ -55,8 +58,8 @@ const Context = ({ children }) => {
      }, [])
 
      const authInfo = {
-          user, logo, toyotaImg,
-          bannerImg, bmwImg, teslaImg,
+          user, logo, toyotaImg,corollaImg,cruiserImg,
+          bannerImg, bmwImg, teslaImg,glanzaImg,
           fordImg, hondaImg, mercedesImg,
           loadedProduct, signInWithGoogle,
           logout, loading, setLoading, createUser, userLogin
@@ -64,7 +67,7 @@ const Context = ({ children }) => {
      return (
           <AuthContext.Provider value={authInfo}>
                {children}
-
+               
           </AuthContext.Provider>
      );
 };
