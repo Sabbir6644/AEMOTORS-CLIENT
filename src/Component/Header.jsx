@@ -35,7 +35,7 @@ const handleLogOut =()=>{
               </ul>
             </div>
             <img className='h-12 w-16' src={logo} alt="" />
-            <h2 className='ml-2 text-5xl font-semibold'>A<span className='text-red-900'>E</span>MOTORS</h2>
+            <h2 className='ml-2 text-3xl md:text-5xl font-semibold'>A<span className='text-red-900'>E</span>MOTORS</h2>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1 gap-5 text-lg font-bold">

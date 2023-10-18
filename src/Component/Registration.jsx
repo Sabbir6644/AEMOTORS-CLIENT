@@ -1,9 +1,10 @@
 import { useContext, useRef, useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import { Link } from "react-router-dom";
-import { updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { AuthContext } from "./Context";
 import Swal from "sweetalert2";
+import auth from "../../public/firebase.config";
 
 
 
@@ -43,19 +44,8 @@ const Registration = () => {
           } else if (!isStrongPassword(password)) {
                return alert('Password must contain at least one capital letter and one number.');
           } else {
-               // Save user to database
-               const user = { name, email, password }
-               fetch('https://user-management-server-jz7pc3f2c-servers-projects.vercel.app/users', {
-                    method: 'POST',
-                    headers: {
-                         'content-type': 'application/json'
-                    },
-                    body: JSON.stringify(user)
-               })
-                    .then(res => res.json())
-                    .then(data => console.log(data))
-
-               // createUserWithEmailAndPassword(auth, email, password)
+             
+               createUserWithEmailAndPassword(auth, email, password)
 
                createUser(email, password)
                     .then((result) => {

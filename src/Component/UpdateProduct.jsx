@@ -1,7 +1,8 @@
 import Swal from "sweetalert2";
 
 
-const AddProduct = () => {
+const UpdateProduct = () => {
+
      const handleAdd= e=>{
           e.preventDefault();
           const name = e.target.name.value;
@@ -35,12 +36,11 @@ console.log(name);
                     }
                } )
      }
-
      return (
           <div className="max-w-3xl mx-auto h-screen items-center flex justify-center ">
           <div className="py-5">
                <div className="text-center">
-               <h2 className="text-3xl font-bold">Add New Product</h2>
+               <h2 className="text-3xl font-bold">Update Product</h2>
 
                </div>
           <form onSubmit={handleAdd} className="max-w-[665px] mx-auto my-5">
@@ -99,7 +99,7 @@ console.log(name);
                          </div>
                <div className=" gap-5 mt-5">
                     
-                    <input type="submit" value="Add Product" className="input border w-full bg-red-900 text-white " />
+                    <input type="submit" value="Update Product" className="input border w-full bg-red-900 text-white " />
                </div>
 
           </form>
@@ -108,4 +108,4 @@ console.log(name);
      );
 };
 
-export default AddProduct;
+export default UpdateProduct;

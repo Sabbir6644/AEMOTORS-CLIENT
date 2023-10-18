@@ -83,7 +83,7 @@ const Login = () => {
           <div className="flex min-h-screen items-center mx-auto">
                <div className=" w-11/12 md:w-[500px] mx-auto">
                     <div>
-                         <h2 className="text-center text-5xl font-bold text-green-400 mb-9">Please login</h2>
+                         <h2 className="text-center text-5xl font-bold text-red-900 mb-9">Please login</h2>
                          <form onSubmit={handleSubmit}>
                               <input ref={emailRef} className="border p-2 w-full" type="email" name="email" placeholder="Email..." required />
 
@@ -98,7 +98,7 @@ const Login = () => {
                                              handleShow();
                                         }}>{show ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}</button></span>
                               </div>
-                              <input className="border p-2 w-full bg-green-400" type="submit" value="Login" />
+                              <input className="border p-2 w-full bg-red-900 text-white" type="submit" value="Login" />
                          </form>
                          <div className="flex justify-between">
                               <p>If you have no account? Please <Link className="text-blue-800" to={'/registration'}>Registration</Link></p>
