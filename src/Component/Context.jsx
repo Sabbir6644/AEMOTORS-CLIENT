@@ -29,8 +29,9 @@ const Context = ({ children }) => {
      // google login
      const googleProvider = new GoogleAuthProvider();
      const signInWithGoogle = () => {
-          signInWithPopup(auth, googleProvider)
           setLoading(true)
+          return signInWithPopup(auth, googleProvider)
+          
      }
      // Login with emai and pass
      const userLogin = (email, password) => {
@@ -51,6 +52,7 @@ const Context = ({ children }) => {
           const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
                setUser(currentUser);
                setLoading(false)
+               
           });
           return () => {
                unSubscribe()

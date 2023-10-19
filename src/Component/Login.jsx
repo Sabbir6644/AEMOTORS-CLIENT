@@ -6,12 +6,13 @@ import Swal from 'sweetalert2'
 import { AuthContext } from "./Context";
 
 
+
 const Login = () => {
      const navigate = useNavigate();
      const location = useLocation();
      const { userLogin, signInWithGoogle } = useContext(AuthContext);
      const [alram, setAlram] = useState(null);
-     const [show, setShow] = useState(false);
+     const [show, setShow] = useState(false); 
      const handleShow = () => {
 
           setShow(!show)
@@ -24,13 +25,13 @@ const Login = () => {
 
      const emailRef = useRef(null);
      const passwordRef = useRef(null);
-     const handleGoogle= ()=>{
+     const handleGoogle=()=>{
           signInWithGoogle()
           .then(()=>{
                Swal.fire({
                     position: 'center',
                     icon: 'success',
-                    title: 'Login Successful!',
+                    title: 'Login Successfully!',
                     showConfirmButton: false,
                     timer: 1500
                   })
@@ -40,7 +41,9 @@ const Login = () => {
                setAlram(err.message);
                
           })
+          
      }
+
      const handleSubmit = e => {
           e.preventDefault();
           const email = e.target.email.value;
