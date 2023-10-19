@@ -1,10 +1,14 @@
+import { useContext } from "react";
+import { AuthContext } from "./Context";
 
 
 const Branch = () => {
+     const {isDarkMode} = useContext(AuthContext);
      return (
+          <div className={`bg-${isDarkMode ? 'gray' : 'white'} text-${isDarkMode ? 'white' : 'black'}`}>
           <div className="my-5">
                <div className="bg-red-900 py-5">
-               <h2 className="text-center text-5xl font-bold text-white ">Our Branches</h2>
+               <h2 className="text-center text-5xl font-bold ">Our Branches</h2>
                </div>
                <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
 
@@ -19,6 +23,7 @@ const Branch = () => {
                     </div>
 
                </div>
+          </div>
           </div>
      );
 };

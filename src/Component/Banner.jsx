@@ -6,9 +6,9 @@ import Branch from "./Branch";
 
 
 const Banner = () => {
-     const { bannerImg } = useContext(AuthContext)
+     const { bannerImg, isDarkMode } = useContext(AuthContext)
      return (
-          <div>
+          <div className={`bg-${isDarkMode ? 'gray' : 'white'} text-${isDarkMode ? 'white' : 'black'}`}>
                <div className="bg-red-50">
                <div className="md:flex justify-between items-center">
 

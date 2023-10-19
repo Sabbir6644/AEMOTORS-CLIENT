@@ -79,7 +79,7 @@ const Registration = () => {
           <div className="flex mx-auto h-screen items-center">
                <div className=" w-11/12 md:w-[500px] mx-auto">
                     <div>
-                    <h2 className="text-center text-5xl font-bold text-green-400 mb-9">Please Sign Up</h2>
+                    <h2 className="text-center text-5xl font-bold text-red-900 mb-9">Please Registration </h2>
                          <form onSubmit={handleSubmit}>
                               <input ref={nameRef} className="border p-2 w-full mb-4" type="text" name="name" placeholder="Name..." required />
                               <input ref={emailRef} className="border p-2 w-full mb-4" type="email" name="email" placeholder="Email..." required />
@@ -95,12 +95,12 @@ const Registration = () => {
                                              handleShow();
                                         }}>{show ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}</button></span>
                               </div>
-                              <div className="mb-2">
+                              <div className="mb-2 text-black">
                                    <input type="checkbox" name="terms" id="terms" /><label className="ml-2" htmlFor="terms">Accept our terms & condition.</label>
                               </div>
-                              <input className="border p-2 w-full bg-green-400" type="submit" value="Sign Up" />
+                              <input className="border p-2 w-full bg-red-900" type="submit" value="Register" />
                          </form>
-                         <p>Have an account? Please <Link className="text-blue-800" to={'/login'}>Login</Link></p>
+                         <p className="text-black">Have an account? Please <Link className="text-blue-800" to={'/login'}>Login</Link></p>
                     </div>
                     <div>
                          {

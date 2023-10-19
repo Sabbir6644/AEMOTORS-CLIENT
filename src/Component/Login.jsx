@@ -103,7 +103,7 @@ const Login = () => {
                               </div>
                               <input className="border p-2 w-full bg-red-900 text-white" type="submit" value="Login" />
                          </form>
-                         <div className="flex justify-between">
+                         <div className="flex justify-between text-black">
                               <p>If you have no account? Please <Link className="text-blue-800" to={'/registration'}>Registration</Link></p>
                          </div>
                     </div>
@@ -112,7 +112,7 @@ const Login = () => {
                     }
 
                     <div className="mt-3">
-                         <button onClick={handleGoogle} className="w-full py-2 border rounded-md text-lg font-medium">Login with Google</button>
+                         <button onClick={handleGoogle} className="w-full py-2 border rounded-md text-lg text-black font-medium">Login with Google</button>
                     </div>
                </div>
 
