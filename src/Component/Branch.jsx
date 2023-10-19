@@ -3,7 +3,9 @@
 const Branch = () => {
      return (
           <div className="my-5">
-               <h2 className="text-center text-5xl font-bold text-red-900 mb-5 ">Our Branchs</h2>
+               <div className="bg-red-900 py-5">
+               <h2 className="text-center text-5xl font-bold text-white ">Our Branches</h2>
+               </div>
                <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
 
                     <div className="w-full p-4 text-center bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
