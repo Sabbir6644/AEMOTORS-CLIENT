@@ -17,8 +17,13 @@ import car6 from "/src/images/car1 (6).png"
 
 export const AuthContext = createContext()
 const Context = ({ children }) => {
+     const [isDarkMode, setIsDarkMode] = useState(false);
      const [loading, setLoading] = useState(true);
      const [user, setUser] = useState();
+     // theme toggle
+     const toggleTheme = () => {
+          setIsDarkMode(!isDarkMode);
+        };
      // loaded created user from database
      const [loadedProduct, setLoadedProduct] = useState();
      useEffect(() => {
@@ -33,7 +38,7 @@ const Context = ({ children }) => {
           return signInWithPopup(auth, googleProvider)
           
      }
-     // Login with emai and pass
+     // Login with email and pass
      const userLogin = (email, password) => {
           return signInWithEmailAndPassword(auth, email, password)
      }
@@ -64,7 +69,7 @@ const Context = ({ children }) => {
           bannerImg,glanzaImg,
           loadedProduct, signInWithGoogle,
           logout, loading, setLoading, createUser, userLogin,
-          car1, car2, car3, car4, car5, car6
+          car1, car2, car3, car4, car5, car6, isDarkMode, setIsDarkMode, toggleTheme
      }
      // { toyotaImg, bmwImg, teslaImg, fordImg, hondaImg, mercedesImg }
      return (

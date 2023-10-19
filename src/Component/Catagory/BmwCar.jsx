@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
+import Rating from "../Rating";
 
 
 const BmwCar = ({car}) => {
@@ -20,7 +21,9 @@ const BmwCar = ({car}) => {
             </div>
             <div className="flex justify-between">
             <h2 className="card-title"> Price: {price}</h2>
-            <h2 className="card-title"> Rating: {rating}</h2>
+            <div className="card-title"> Rating:
+            <Rating rating={rating} />
+          </div>
             </div>
             {/* /product/:_id */}
             <div className="card-actions justify-end"> 
