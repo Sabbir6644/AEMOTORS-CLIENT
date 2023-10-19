@@ -3,13 +3,7 @@ import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged,
 import { createContext, useEffect, useState } from "react";
 import auth from "../../public/firebase.config";
 import logo from "/src/images/logo.png"
-import bmwImg from "/src/images/bmw.png"
 import bannerImg from "/src/images/banner.png"
-import fordImg from "/src/images/ford.png"
-import hondaImg from "/src/images/Honda-Logo.png"
-import mercedesImg from "/src/images/Mercedes-Benz.png"
-import teslaImg from "/src/images/tesla.jpg"
-import toyotaImg from "/src/images/toyota.png"
 import corollaImg from "/src/images/corolla.jpg"
 import cruiserImg from "/src/images/cruiser.webp"
 import glanzaImg from "/src/images/glanza.jpg"
@@ -64,13 +58,13 @@ const Context = ({ children }) => {
      }, [])
 
      const authInfo = {
-          user, logo, toyotaImg,corollaImg,cruiserImg,
-          bannerImg, bmwImg, teslaImg,glanzaImg,
-          fordImg, hondaImg, mercedesImg,
+          user, logo,corollaImg,cruiserImg,
+          bannerImg,glanzaImg,
           loadedProduct, signInWithGoogle,
           logout, loading, setLoading, createUser, userLogin,
           car1, car2, car3, car4, car5, car6
      }
+     // { toyotaImg, bmwImg, teslaImg, fordImg, hondaImg, mercedesImg }
      return (
           <AuthContext.Provider value={authInfo}>
                {children}
