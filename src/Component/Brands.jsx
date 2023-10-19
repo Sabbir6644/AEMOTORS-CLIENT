@@ -1,5 +1,5 @@
-import { useContext, useEffect, useState } from "react";
-import { AuthContext } from "./Context";
+import { useEffect, useState } from "react";
+
 import Brand from "./Catagory/Brand";
 
 

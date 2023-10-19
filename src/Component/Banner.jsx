@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "./Context";
 import Brands from "./Brands";
 import LatestCar from "./Catagory/LatestCar";
+import Branch from "./Branch";
 
 
 const Banner = () => {
@@ -28,6 +29,7 @@ const Banner = () => {
           </div>
           <LatestCar></LatestCar>
           <Brands></Brands>
+          <Branch></Branch>
           </div>
      );
 };
