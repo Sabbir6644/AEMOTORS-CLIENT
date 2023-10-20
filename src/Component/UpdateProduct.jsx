@@ -57,7 +57,15 @@ const {name, brandName, type, price, rating, details, image, _id } = useLoaderDa
                          <label className="label">
                               <span className="label-text">Brand Name</span>
                          </label>
-                         <input type="text" placeholder="Brand Name" defaultValue={brandName} name="brandName" className="rounded-md p-2 border w-full " />
+                         <select name="brandName" className="rounded-md p-2 border w-full max-w-xs">
+                                        <option value="others">Select one</option>
+                                        <option value="Toyota">Toyota</option>
+                                        <option value="Bmw">Bmw</option>
+                                        <option value="Tesla">Tesla</option>
+                                        <option value="Ford">Ford</option>
+                                        <option value="Honda">Honda</option>
+                                        <option value="Mercedes">Mercedes-Benz</option>
+                                   </select>
                     </div>
                </div>
 
