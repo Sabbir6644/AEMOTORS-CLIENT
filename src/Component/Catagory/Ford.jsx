@@ -36,12 +36,16 @@ const Ford = () => {
 <a href="#item3" className="btn btn-xs">3</a> 
 <a href="#item4" className="btn btn-xs">4</a>
 </div>
-          {/* Slider start */}
-           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 mx-auto my-5">
-           {
-                loadedData?.map((car) => <FordCar key={car._id} car={car}></FordCar>)
-           }
-           </div>
+          {/* Slider end */}
+          {
+               loadedData.length>0? <div className="grid grid-cols-1 gap-5 md:grid-cols-2 mx-auto my-5">
+               {
+                    loadedData?.map((car) => <FordCar key={car._id} car={car}></FordCar>)
+               }
+               </div> : <div className="flex justify-center items-center min-h-[50vh]">
+                    <p className="text-5xl font-bold"> Sorry, no product available</p></div>
+          }
+          
            
 
       </div>
