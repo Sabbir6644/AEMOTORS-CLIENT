@@ -22,7 +22,8 @@ const handleLogOut =()=>{
   logout()
  }
      return (
-          <div className="navbar bg-red-900 shadow-xl ">
+      <div className={`bg-${isDarkMode ? 'gray-800' : 'red-900'} text-${isDarkMode ? 'white' : 'white'}`}>
+          <div className="navbar  shadow-xl ">
           <div className="navbar-start">
             <div className="dropdown">
               <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -40,7 +41,7 @@ const handleLogOut =()=>{
               </ul>
             </div>
             <img className='h-12 w-16' src={logo} alt="" />
-            <h2 className='ml-2 text-3xl md:text-5xl font-semibold'>A<span className=''>E</span>MOTORS</h2>
+            <h2 className='ml-2 text-3xl md:text-5xl font-semibold'>AEMOTORS</h2>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1 gap-5 text-lg font-bold">
@@ -62,6 +63,7 @@ const handleLogOut =()=>{
           
             
           </div>
+        </div>
         </div>
      );
 };

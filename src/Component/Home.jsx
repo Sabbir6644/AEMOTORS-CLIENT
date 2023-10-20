@@ -12,16 +12,17 @@ const Home = () => {
      const {isDarkMode} = useContext(AuthContext);
      return (
           <div>
-          <div className={`bg-${isDarkMode ? 'gray' : 'white'} text-${isDarkMode ? 'white' : 'black'}`}>
                <Header></Header>
-               </div>
+            
                <div className="max-w-7xl mx-auto min-h-[50vh]">
                <Outlet></Outlet>
                </div>
               
-               <div className={`bg-${isDarkMode ? 'gray' : 'white'} text-${isDarkMode ? 'white' : 'black'}`}>
+               <div className={`${isDarkMode ?'bg-gray-800':'bg-red-900'} text-white`}>
                <Footer></Footer>
                </div>
+  
+
           </div>
      );
 };
